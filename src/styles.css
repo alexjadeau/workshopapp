@@ -8,10 +8,12 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 h1 {
     font-family: 'Oswald', sans-serif;
     font-size: 2em;
 }
+
 h2 {
     font-family: 'Source Sans Pro', sans-serif;
 }
