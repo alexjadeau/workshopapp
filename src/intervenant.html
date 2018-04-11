@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<title>TIME</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="assets/intervenant.css">
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+           <div class="w3-dropdown-hover w3-hide-small">
+            <button class="w3-padding-large w3-button" >Mes projets <i class="fa fa-caret-down"></i></button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a href="#JEE" id="JEE" class="w3-bar-item w3-button" onclick="select_project(this.id)">JEE</a>
+                <a href="#Oracle" id="Oracle" class="w3-bar-item w3-button" onclick="select_project(this.id)">Oracle</a>
+                <a href="#Java" id="Java" class="w3-bar-item w3-button" onclick="select_project(this.id)">Java</a>
+            </div>
+           </div>
+
+        <script>
+            function select_project(id) {
+
+                document.getElementById("Title").innerHTML = id;
+                document.getElementsByClassName("text")[0].innerHTML = "<h1>Choisissez un de vos groupes </h1>";
+
+            }
+            function select_Group(id) {
+
+                document.getElementById("Title1").innerHTML = id;
+
+                var text = document.getElementsByClassName("text")[0];
+                var ImgEpsi = document.getElementsByClassName("imageEpsi")[0];
+                var chat = document.getElementsByClassName("chat")[0];
+                text.style.display = "none";
+                ImgEpsi.style.display = "none";
+                chat.style.display = "inline";
+            }
+
+        </script>
+
+
+
+        <div class="w3-dropdown-hover w3-hide-small">
+            <button class="w3-padding-large w3-button"   id="Title" ><i class="fa fa-caret-down"></i></button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a href="#Title1" id="Groupe1" class="w3-bar-item w3-button" onclick="select_Group(this.id)">Groupe1</a>
+                <a href="#Title1" id="Groupe2" class="w3-bar-item w3-button" onclick="select_Group(this.id)">Groupe2</a>
+                <a href="#Title1" id="Groupe3" class="w3-bar-item w3-button" onclick="select_Group(this.id)">Groupe3</a>
+            </div>
+        </div>
+
+
+        <div class="w3-dropdown-hover w3-hide-small">
+            <button class="w3-padding-large w3-button"  id="Title1" ><i class="fa fa-caret-down"></i></button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+            </div>
+        </div>
+
+
+        <div class="w3-dropdown-hover w3-hide-small"id="right">
+            <button class="w3-padding-large  w3-button " >Utilisateur<i class="fa fa-caret-down"></i></button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a href="#dispo" id="Etat" class="w3-bar-item w3-button" >Disponibilitée</a>
+                <a href="jetons.html" id="Jetons" class="w3-bar-item w3-button" >Jetons</a>
+                <a href="index.hml" id="déconnection" class="w3-bar-item w3-button" >Deconnection</a>
+            </div>
+        </div>
+
+
+</div>
+
+<div class=" imageEpsi" align="center">
+    <img src="assets/images/JPO-EPSI-GRENOBLE-Venez-nous-rencontrer-!-101486_reference.png"  height=40%" width=30%>
+</div>
+
+    <div class ="text">
+<h1>Choisissez un de vos projets  </h1>
+    </div>
+
+    <div class ="chat">
+        <iframe width="100%" height="700" src="https://console.dialogflow.com/api-client/demo/embedded/62340c95-e82f-40e4-a768-5344f7095fd0"></iframe>
+    </div>
+
+
+</body>
+</html>
