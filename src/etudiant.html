@@ -5,6 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="assets/peda.css">
 <link rel="stylesheet" href="chat.css">
+<script>
+    function select_project(id) {
+
+        document.getElementById("Title").innerHTML = id;
+    }
+    function select_Group(id) {
+
+        document.getElementById("Title1").innerHTML = id;
+    }
+    function select_Intervenant(id) {
+
+        document.getElementById("Title2").innerHTML = id;
+    }
+</script>
 <body>
 
 <!-- Navbar -->
@@ -14,19 +28,19 @@
             <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
 
             <div class="w3-dropdown-hover w3-hide-small">
-                <button class="w3-padding-large w3-button" title="More"> Mes Projets <i class="fa fa-caret-down"></i></button>
+                <button class="w3-padding-large w3-button" title="More"> Mes Projets </button>
                 <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                    <a href="#" class="w3-bar-item w3-button">Oracle</a>
-                    <a href="#" class="w3-bar-item w3-button">Anglais</a>
+                    <a href="#Oracle" class="w3-bar-item w3-button" onclick="select_project(this.id)">Oracle</a>
+                    <a href="#Anglais" class="w3-bar-item w3-button" onclick="select_project(this.id)">Anglais</a>
                     <a href="#" class="w3-bar-item w3-button">Java</a>
                     <a href="#" class="w3-bar-item w3-button">Resau</a>
-                    <a href="groupe.html" class="w3-bar-item w3-button">Créer un nouveau groupe</a>
+                    <a href="groupe.html" class="w3-bar-item w3-button">Créer un nouveau projet</a>
 
                 </div>
             </div>
 
         <div class="w3-dropdown-hover w3-hide-small">
-            <button class="w3-padding-large w3-button" title="More"> Nom du Projet selectionné <i class="fa fa-caret-down"></i></button>
+            <button class="w3-padding-large w3-button" id="Title "> Nom du Projet selectionné </button>
             <div class="w3-dropdown-content w3-bar-block w3-card-4">
             </div>
         </div>
@@ -55,45 +69,14 @@
         </div>
 
         <div class="w3-dropdown-hover w3-hide-small">
-            <button class="w3-padding-large w3-button" title="More"> deconnexion <i class="fa fa-caret-down"></i></button>
+            <button class="w3-padding-large w3-button" title="More" id="right"> deconnexion</button>
         </div>
 
     </div>
 
 
 
-
-<div class = tchat>
-    <h2> Chat Message </h2>
-    <div class="container">
-        <p>Hello. How are you today?</p>
-        <span class="time-right">11:00</span>
-    </div>
-
-    <div class="container darker">
-        <p>Hey! I'm fine. Thanks for asking!</p>
-        <span class="time-left">11:01</span>
-    </div>
-
-    <div class="container">
-        <p>Sweet! So, what do you wanna do today?</p>
-        <span class="time-right">11:02</span>
-    </div>
-
-    <div class="container darker">
-        <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
-        <span class="time-left">11:05</span>
-    </div>
-
-    <div class ="message">
-        <input type="text" id="name" name="user_name">
-    </div>
-
-    <div class="valider">
-        <button type="submit">Envoyer le message</button>
-    </div>
-
-</div>
+    <iframe width="1370" height="600" src="https://console.dialogflow.com/api-client/demo/embedded/62340c95-e82f-40e4-a768-5344f7095fd0"></iframe>
 
 
 
