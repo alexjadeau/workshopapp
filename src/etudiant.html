@@ -23,63 +23,55 @@
 
 <!-- Navbar -->
 <div class="w3-top">
-        <div class="w3-bar w3-black w3-card">
 
-            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
+       onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <div class="w3-bar w3-black w3-card">
+        <div class="w3-dropdown-hover w3-hide-small">
+            <button class="w3-padding-large w3-button" title="Project">Mes projets</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a href="#oracle" id="Oracle" class="w3-bar-item w3-button" onclick="select_project(this.id)">Oracle</a>
+                <a href="#JEE"  id="JEE"class="w3-bar-item w3-button" onclick="select_project(this.id)">JEE</a>
+                <a href="#IOT"  id="IOT"class="w3-bar-item w3-button" onclick="select_project(this.id)">IOT</a>
+                <a href="#WorkShop" id="WorkShop" class="w3-bar-item w3-button" onclick="select_project(this.id)">WorkShop</a>
+                <a href="groupe.html" id="add"  class="w3-bar-item w3-button" onclick="toggle_div('id_du_div');">créer un projet</a>
+            </div>
+        </div>
+
+        <div class="w3-dropdown-hover w3-hide-small">
+            <button class="w3-padding-large w3-button" title="Project" id="Title">Projet selectionner</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a href="#oracle" id="intervenant 1" class="w3-bar-item w3-button" onclick="select_Group(this.id)">intervenant 1</a>
+                <a href="#JEE"  id="intervenant 2"class="w3-bar-item w3-button" onclick="select_Group(this.id)">intervenant 2</a>
+                <a href="#IOT"  id="intervenant 3"class="w3-bar-item w3-button" onclick="select_Group(this.id)">intervenant 3</a>
+                <a href="#WorkShop" id="intervenant 4" class="w3-bar-item w3-button" onclick="select_Group(this.id)">intervenant 4</a>
+            </div>
+        </div>
+        <div class="w3-dropdown-hover w3-hide-small">
+            <button class="w3-padding-large w3-button" title="Project" id="Title1">intervenant <selectionné></selectionné></button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+            </div>
+        </div>
 
             <div class="w3-dropdown-hover w3-hide-small">
-                <button class="w3-padding-large w3-button" title="More"> Mes Projets </button>
+                <button class="w3-padding-large w3-button" title="Project">Jeton</button>
                 <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                    <a href="#Oracle" class="w3-bar-item w3-button" onclick="select_project(this.id)">Oracle</a>
-                    <a href="#Anglais" class="w3-bar-item w3-button" onclick="select_project(this.id)">Anglais</a>
-                    <a href="#" class="w3-bar-item w3-button">Java</a>
-                    <a href="#" class="w3-bar-item w3-button">Resau</a>
-                    <a href="groupe.html" class="w3-bar-item w3-button">Créer un nouveau projet</a>
+                    <a href="#oracle">100</a>
+
 
                 </div>
-            </div>
 
-        <div class="w3-dropdown-hover w3-hide-small">
-            <button class="w3-padding-large w3-button" id="Title "> Nom du Projet selectionné </button>
-            <div class="w3-dropdown-content w3-bar-block w3-card-4">
-            </div>
-        </div>
-
-        <div class="w3-dropdown-hover w3-hide-small">
-            <button class="w3-padding-large w3-button" title="More"> Mon Groupes <i class="fa fa-caret-down"></i></button>
-            <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                <a href="#" class="w3-bar-item w3-button">Jean Claude</a>
-                <a href="#" class="w3-bar-item w3-button">Hervé</a>
-                <a href="#" class="w3-bar-item w3-button">Michel</a>
-            </div>
-        </div>
-
-        <div class="w3-dropdown-hover w3-hide-small">
-            <button class="w3-padding-large w3-button" title="More"> Nos jetons <i class="fa fa-caret-down"></i></button>
-            <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                <a href="#" class="w3-bar-item w3-button">100</a>
-            </div>
-        </div>
-
-        <div class="w3-dropdown-hover w3-hide-small">
-            <button class="w3-padding-large w3-button" title="More"> intervenant <i class="fa fa-caret-down"></i></button>
-            <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                <a href="#" class="w3-bar-item w3-button">francis</a>
-            </div>
-        </div>
-
-        <div class="w3-dropdown-hover w3-hide-small">
-            <button class="w3-padding-large w3-button" title="More" id="right"> deconnexion</button>
-        </div>
+        <a href="index.html" class="w3-bar-item w3-button w3-padding-large" id="right">Déconnection</a>
 
     </div>
 
 
 
-    <iframe width="1370" height="600" src="https://console.dialogflow.com/api-client/demo/embedded/62340c95-e82f-40e4-a768-5344f7095fd0"></iframe>
 
+    <iframe width="100%" height="600" src="https://console.dialogflow.com/api-client/demo/embedded/62340c95-e82f-40e4-a768-5344f7095fd0"></iframe>
 
 
 </div>
+
 </body>
 </html>
