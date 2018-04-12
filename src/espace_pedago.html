@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
-<title>Espace pedagogique</title>
+<title>TIME</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="assets/peda.css">
+<link rel="stylesheet" href="assets/intervenant.css">
 <body>
 
 <!-- Navbar -->
@@ -13,38 +14,40 @@
        onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <div class="w3-bar w3-black w3-card">
         <div class="w3-dropdown-hover w3-hide-small">
-            <button class="w3-padding-large w3-button" title="Project">Espace de travaille</button>
+            <button class="w3-padding-large w3-button" title="Project">Espace de travail</button>
             <div class="w3-dropdown-content w3-bar-block w3-card-4">
                 <a href="#oracle" id="Oracle" class="w3-bar-item w3-button" onclick="select_project(this.id)">Oracle</a>
-                <a href="#JEE"  id="JEE"class="w3-bar-item w3-button" onclick="select_project(this.id)">JEE</a>
-                <a href="#IOT"  id="IOT"class="w3-bar-item w3-button" onclick="select_project(this.id)">IOT</a>
+                <a href="#JEE" id="JEE" class="w3-bar-item w3-button" onclick="select_project(this.id)">JEE</a>
+                <a href="#IOT" id="IOT" class="w3-bar-item w3-button" onclick="select_project(this.id)">IOT</a>
                 <a href="#WorkShop" id="WorkShop" class="w3-bar-item w3-button" onclick="select_project(this.id)">WorkShop</a>
-                <a href="#add" id="add"  class="w3-bar-item w3-button" onclick="toggle_div('id_du_div');">add workspace</a>
+                <a href="creer_projet.html" id="add" class="w3-bar-item w3-button" onclick="toggle_div('id_du_div');">créer un espace de travail</a>
 
             </div>
         </div>
 
-            <div class="w3-dropdown-hover w3-hide-small">
-                <button class="w3-padding-large w3-button" title="Project" id="Title">Sélectionner le groupe</button>
-                <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                    <a href="#oracle" id="Groupe1" class="w3-bar-item w3-button" onclick="select_Group(this.id)">Groupe 1</a>
-                    <a href="#JEE"  id="Groupe2"class="w3-bar-item w3-button" onclick="select_Group(this.id)">Groupe 2</a>
-                    <a href="#IOT"  id="Groupe3"class="w3-bar-item w3-button" onclick="select_Group(this.id)">Groupe 3</a>
-                    <a href="#WorkShop" id="Groupe4" class="w3-bar-item w3-button" onclick="select_Group(this.id)">Groupe 4</a>
+        <div class="w3-dropdown-hover w3-hide-small">
+            <button class="w3-padding-large w3-button" title="Project" id="Title">Sélectionner le groupe</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a href="#oracle" id="Groupe1" class="w3-bar-item w3-button" onclick="select_Group(this.id)">Groupe 1</a>
+                <a href="#JEE" id="Groupe2" class="w3-bar-item w3-button" onclick="select_Group(this.id)">Groupe 2</a>
+                <a href="#IOT" id="Groupe3" class="w3-bar-item w3-button" onclick="select_Group(this.id)">Groupe 3</a>
+                <a href="#WorkShop" id="Groupe4" class="w3-bar-item w3-button" onclick="select_Group(this.id)">Groupe
+                    4</a>
 
-                </div>
             </div>
+        </div>
         <div class="w3-dropdown-hover w3-hide-small">
             <button class="w3-padding-large w3-button" title="Project" id="Title1">Sélectionner l'intervanant</button>
             <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                <a href="#oracle" id="Intervanant1" class="w3-bar-item w3-button" onclick="select_Intervenant(this.id)">Intervanant 1</a>
+                <a href="#oracle" id="Intervanant1" class="w3-bar-item w3-button" onclick="select_Intervenant(this.id)">Intervanant
+                    1</a>
 
 
             </div>
         </div>
 
-        <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small" id="Title2">BAND</a>
-        <a href="#" class="w3-bar-item w3-button w3-padding-large" id="right">Déconnection</a>
+        <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small" id="Title2"></a>
+        <a href="index.html" class="w3-bar-item w3-button w3-padding-large" id="right">Déconnection</a>
 
 
     </div>
@@ -63,13 +66,14 @@
 
     <!-- The Band Section -->
     <div></div>
-    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="corp" style="display:block;">
-        <h2 class="w3-wide">Veuillez sélectionner un epsace de travaille ou en créez un nouveau</h2>
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="corp"
+         style="display:block;">
+
         <!-- Un bouton avec '+' dedans, et un onclick qui appelle une fonction avec -->
         <!-- en param le bouton et l'id du div à afficher/masquer. -->
         <!-- Un div caché avec un attribut id -->
         <div id="id_du_div" style="display:none;">
-            <form method="post" >
+            <form method="post">
                 Nom de l'espace de travaille<input type="text">
                 Selectionner l'intervenant <SELECT name="nom" size="1">
                 <OPTION>mr 1</OPTION>
@@ -83,6 +87,16 @@
         </div>
 
 
+    </div>
+    <div class=" imageEpsi" align="center">
+        <img src="assets/images/JPO-EPSI-GRENOBLE-Venez-nous-rencontrer-!-101486_reference.png" height=40%" width=30%>
+    </div>
+    <div class="h1">
+        <h1>Veuillez sélectionner un epsace de travail ou en créez un nouveau </h1>
+    </div>
+
+    <div class="text">
+        <h1>Choisissez un groupe</h1>
     </div>
 
     <!-- End Page Content -->
@@ -125,33 +139,102 @@
             modal.style.display = "none";
         }
     }
+
     function select_project(id) {
 
         document.getElementById("Title").innerHTML = id;
+        document.getElementsByClassName("h1")[0].innerHTML = "<h1>Choisissez un groupe de travail </h1>";
+
     }
+
     function select_Group(id) {
 
         document.getElementById("Title1").innerHTML = id;
+        document.getElementsByClassName("h1")[0].innerHTML = "<h1> Choisissez un intervenant </h1>";
+
     }
+
     function select_Intervenant(id) {
 
         document.getElementById("Title2").innerHTML = id;
+        var h1 = document.getElementsByClassName("h1")[0];
+        var ImgEpsi = document.getElementsByClassName("imageEpsi")[0];
+        var pedago = document.getElementsByClassName("w3-content")[0];
+        var text = document.getElementsByClassName("text")[0];
+        var tab = document.getElementById("tab");
+        tab.style.display="block";
+        text.style.display = "none";
+        h1.style.display = "none";
+        ImgEpsi.style.display = "none";
+        pedago.style.display = "inline";
+
     }
-    function toggle_div( id) { // On déclare la fonction toggle_div qui prend en param le bouton et un id
+
+    function toggle_div(id) { // On déclare la fonction toggle_div qui prend en param le bouton et un id
         var div = document.getElementById(id); // On récupère le div ciblé grâce à l'id
-        var div1=document.getElementById("corp")
-        if(div.style.display=="none") { // Si le div est masqué...
-            div1.style.display="none";
-            div.style.display ="block"; // ... on l'affiche...
+        var div1 = document.getElementById("corp")
+        if (div.style.display == "none") { // Si le div est masqué...
+            div1.style.display = "none";
+            div.style.display = "block"; // ... on l'affiche...
 
         } else { // S'il est visible...
 
             div.style.display = "none"; // ... on le masque...
-            div1.style.display =  "block";
+            div1.style.display = "block";
         }
     }
 
+
 </script>
 
+<div class="w3-content" style="max-width:2000px;margin-top:46px; display: none;" id="tab">
+    <div class="w3-container">
+        <h2>Compte rendu projets intervenant1 mois de MARS</h2>
+
+        <table class="w3-table-all w3-hoverable">
+            <thead>
+            <tr class="w3-light-grey">
+                <th>projet</th>
+                <th>groupe</th>
+                <th>temps passées</th>
+                <th>jeton</th>
+            </tr>
+            </thead>
+            <tr>
+                <td>initial</td>
+                <td>groupe 1</td>
+                <td>60 min</td>
+                <td>60</td>
+            </tr>
+            <tr>
+            <tr>
+                <td>java</td>
+                <td>groupe 1</td>
+                <td>30 min</td>
+                <td>30</td>
+            </tr>
+            <td>JEE</td>
+            <td>groupe 1</td>
+            <td>15 min</td>
+            <td>15</td>
+            </tr>
+            <tr>
+                <td>JEE</td>
+                <td>groupe 2</td>
+                <td>10 min</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>réseau</td>
+                <td>groupe 2</td>
+                <td>10 min</td>
+                <td>10</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+</div>
 </body>
 </html>

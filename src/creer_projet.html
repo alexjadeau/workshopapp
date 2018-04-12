@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<title>Pedago</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="assets/peda.css">
+<link rel="stylesheet" href="groupe.css">
+
+<script>
+    function add() {
+        //Ceci va te renvoyer la value de l'option sur laquelle tu as cliqué ce qui peut être utile pour la suite..
+        document.getElementById('user').innerHTML = "";
+        //liste correpond au name de ma balise select
+        //======
+        var value_option = users.options[users.selectedIndex].value;
+        for (var i = 0; i < value_option; i++) {
+
+
+
+            //Creation d'un élément
+            var option = document.createElement('input');
+            //Instanciation du type d'élément : text...
+            option.type = ("text");
+            //Instanciation de la valeur de l'input text
+            option.value = "nom etudiant";
+            option.id = i;
+            //On fixe ce champ input dans la div elements
+            document.getElementById('user').appendChild(option);
+        }
+    }
+
+    function select_Intervenant(id) {
+
+        document.getElementById("Title2").innerHTML = id;
+        var h1 = document.getElementsByClassName("h1")[0];
+        var ImgEpsi = document.getElementsByClassName("imageEpsi")[0];
+        var pedago = document.getElementsByClassName("w3-content")[0];
+        var text = document.getElementsByClassName("text")[0];
+        text.style.display = "none";
+        h1.style.display = "none";
+        ImgEpsi.style.display = "none";
+        pedago.style.display = "inline";
+    }
+
+</script>
+
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+           href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                class="fa fa-bars"></i></a>
+
+        <div class="w3-dropdown-hover w3-hide-small">
+            <button class="w3-padding-large w3-button" title="More"> Nouvel espace de travail <i class="fa fa-caret-down"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="form">
+        <form action="espace_pedago.html" id="elements" method="get">
+            <label for="fname">Nom de l'espace de travail</label>
+            <input type="text" id="fname" name="firstname" placeholder="Nom de l'espace de travail"><br>
+
+
+            <label for="fname">Nom de l'intervenant</label>
+            <input type="text" id="fname3" name="firstname" placeholder="nom du groupe"><br>
+
+            <label for="users">Nombres d'etudiants</label><br>
+            <select id="users" name="users"><br>
+                <option value="1" onclick="add()">1</option>
+                <br>
+                <option value="2" onclick="add()">2</option>
+                <br>
+                <option value="3" onclick="add()">3</option>
+                <br>
+                <option value="4" onclick="add()">4</option>
+                <br>
+                <option value="5" onclick="add()">6</option>
+                <br>
+                <br>
+                <option value="5" onclick="add()">7</option>
+                <br>
+                <br>
+                <option value="5" onclick="add()">8</option>
+                <br>
+                <br>
+                <option value="5" onclick="add()">9</option>
+                <br>
+                <br>
+                <option value="5" onclick="add()">10</option>
+                <br>
+                <br>
+                <option value="5" onclick="add()">11</option>
+                <br>
+                <br>
+                <option value="5" onclick="add()">12</option>
+                <br>
+                <br>
+                <option value="5" onclick="add()">13</option>
+                <br>
+                <br>
+                <option value="5" onclick="add()">14</option>
+                <br><br>
+                <option value="5" onclick="add()">15</option>
+                <br><br>
+                <option value="5" onclick="add()">16</option>
+                <br><br>
+                <option value="5" onclick="add()">17</option>
+                <br>
+                <br>
+                <option value="5" onclick="add()">18</option>
+                <br>
+                <br>
+                <option value="5" onclick="add()">19</option>
+                <br>
+                <br>
+                <option value="5" onclick="add()">20</option>
+                <br>
+
+            </select>
+            <div id="user"></div>
+            <br> <label for="fname">Nom des étudiants</label>
+
+            <label for="fname">nombres de jeton</label>
+            <input type="text" id="fname3" name="firstname" placeholder="nombre de jetons"><br>
+
+
+
+                 <input type="submit" value="valider">
+            </form>
+
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>
+
+
+
+

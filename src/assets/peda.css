@@ -4192,3 +4192,25 @@ a {
     content: "\f26b"
 }
 
+h1 {
+    color: #00005B;
+    margin-left: 5%;
+    margin-top: 5%
+}
+
+.imageEpsi {
+    margin-top: 5%
+}
+
+.chat {
+    display: none;
+    margin: 60% auto;
+    widht: 100%;
+
+}
+
+.chat iframe {
+    widht: 100%;
+}
+
+
