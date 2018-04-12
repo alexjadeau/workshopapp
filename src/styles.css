@@ -1,19 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Oswald|Raleway|Source+Sans+Pro');
-
 body {
-    background-image: url(assets/images/background.jpg);
-    background-attachment: fixed;
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: cover;
+    margin: 0;
 }
 
 h1 {
     font-family: 'Oswald', sans-serif;
-    font-size: 2em;
 }
 
 h2 {
     font-family: 'Source Sans Pro', sans-serif;
 }
+
+/* Main color for EPSI
+#7D4B9B
+#31004C
+#EFECF3
+*/
