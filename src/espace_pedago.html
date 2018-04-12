@@ -26,7 +26,7 @@
         </div>
 
         <div class="w3-dropdown-hover w3-hide-small">
-            <button class="w3-padding-large w3-button" title="Project" id="Title">Sélectionner le groupe</button>
+            <button class="w3-padding-large w3-button" title="Project" id="Title">Espace de travail selectionné</button>
             <div class="w3-dropdown-content w3-bar-block w3-card-4">
                 <a href="#oracle" id="Groupe1" class="w3-bar-item w3-button" onclick="select_Group(this.id)">Groupe 1</a>
                 <a href="#JEE" id="Groupe2" class="w3-bar-item w3-button" onclick="select_Group(this.id)">Groupe 2</a>
@@ -37,10 +37,14 @@
             </div>
         </div>
         <div class="w3-dropdown-hover w3-hide-small">
-            <button class="w3-padding-large w3-button" title="Project" id="Title1">Sélectionner l'intervanant</button>
+            <button class="w3-padding-large w3-button" title="Project" id="Title1">Groupe selectionné</button>
             <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                <a href="#oracle" id="Intervanant1" class="w3-bar-item w3-button" onclick="select_Intervenant(this.id)">Intervanant
+                <a href="#oracle" id="Intervenant1" class="w3-bar-item w3-button" onclick="select_Intervenant(this.id)">Intervenant
                     1</a>
+                <a href="#oracle" id="Intervenant2" class="w3-bar-item w3-button" onclick="select_Intervenant(this.id)">Intervenant
+                    2</a>
+                <a href="#oracle" id="Intervenant3" class="w3-bar-item w3-button" onclick="select_Intervenant(this.id)">Intervenant
+                    3</a>
 
 
             </div>
@@ -53,13 +57,6 @@
     </div>
 </div>
 
-<!-- Navbar on small screens -->
-<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-    <a href="#band" class="w3-bar-item w3-button w3-padding-large">BAND</a>
-    <a href="#tour" class="w3-bar-item w3-button w3-padding-large">TOUR</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large">CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">MERCH</a>
-</div>
 
 <!-- Page content -->
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
@@ -74,8 +71,8 @@
         <!-- Un div caché avec un attribut id -->
         <div id="id_du_div" style="display:none;">
             <form method="post">
-                Nom de l'espace de travaille<input type="text">
-                Selectionner l'intervenant <SELECT name="nom" size="1">
+                Nom de l'espace de travail<input type="text">
+                Selectionnez l'intervenant <SELECT name="nom" size="1">
                 <OPTION>mr 1</OPTION>
                 <OPTION>mr 2</OPTION>
                 <OPTION>mr 3</OPTION>
@@ -92,7 +89,7 @@
         <img src="assets/images/JPO-EPSI-GRENOBLE-Venez-nous-rencontrer-!-101486_reference.png" height=40%" width=30%>
     </div>
     <div class="h1">
-        <h1>Veuillez sélectionner un epsace de travail ou en créez un nouveau </h1>
+        <h1>Veuillez selectionner un espace de travail ou en créer un nouveau </h1>
     </div>
 
     <div class="text">
@@ -189,15 +186,15 @@
 
 <div class="w3-content" style="max-width:2000px;margin-top:46px; display: none;" id="tab">
     <div class="w3-container">
-        <h2>Compte rendu projets intervenant1 mois de MARS</h2>
+        <h2>Compte rendu projets intervenant mois de MARS</h2>
 
         <table class="w3-table-all w3-hoverable">
             <thead>
             <tr class="w3-light-grey">
-                <th>projet</th>
-                <th>groupe</th>
-                <th>temps passées</th>
-                <th>jeton</th>
+                <th>PROJET</th>
+                <th>GROUPE</th>
+                <th>TEMPS PASSÉ</th>
+                <th>JETONS</th>
             </tr>
             </thead>
             <tr>
