@@ -5,7 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="assets/peda.css">
 <link rel="stylesheet" href="groupe.css">
+<script>
+    function add() {
+        //Ceci va te renvoyer la value de l'option sur laquelle tu as cliqué ce qui peut être utile pour la suite..
 
+        //liste correpond au name de ma balise select
+        //======
+        var value_option = users.options[users.selectedIndex].value;
+        for (var i = 0; i < value_option; i++) {
+
+            //Creation d'un élément
+            var option = document.createElement('input');
+            //Instanciation du type d'élément : text...
+            option.type = ("text");
+            //Instanciation de la valeur de l'input text
+            option.value = "";
+            option.id = i;
+            //On fixe ce champ input dans la div elements
+            document.getElementById('user').appendChild(option);
+        }
+    }
+</script>
 
 <body>
 
@@ -13,15 +33,18 @@
 <div class="w3-top">
     <div class="w3-bar w3-black w3-card">
 
-        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+           href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                class="fa fa-bars"></i></a>
 
         <div class="w3-dropdown-hover w3-hide-small">
-            <button class="w3-padding-large w3-button" title="More"> Nouveau projet <i class="fa fa-caret-down"></i></button>
+            <button class="w3-padding-large w3-button" title="More"> Nouveau projet <i class="fa fa-caret-down"></i>
+            </button>
         </div>
     </div>
 
-    <div class = "form">
-        <form action="/action_page.php">
+    <div class="form">
+        <form action="/action_page.php" id="elements">
             <label for="fname">Nom du projet</label>
             <input type="text" id="fname" name="firstname" placeholder="nom du projet"><br>
 
@@ -32,24 +55,28 @@
             <label for="fname">Nom de l'intervenant</label>
             <input type="text" id="fname3" name="firstname" placeholder="nom du groupe"><br>
 
-            <label for="country">Nombre de personnes</label><br>
-            <select id="country" name="country"><br>
-                <option value="australia">1</option><br>
-                <option value="canada">2</option><br>
-                <option value="usa">3</option><br>
-                <option value="usa">4</option><br>
-                <option value="usa">5</option><br>
+            <label for="users">Nombre de personnes</label><br>
+            <select id="users" name="users"><br>
+                <option value="1" onclick="add()">1</option>
+                <br>
+                <option value="2" onclick="add()">2</option>
+                <br>
+                <option value="3" onclick="add()">3</option>
+                <br>
+                <option value="4" onclick="add()">4</option>
+                <br>
+                <option value="5" onclick="add()">5</option>
+                <br>
             </select>
-
+            <div id="user"></div>
             <br> <label for="fname">Nom des étudiants</label>
             <input type="text" id="fname4" name="firstname" placeholder="nom du groupe">
 
-              <input type="submit" value="Submit" >
+            <input type="submit" value="Submit">
 
         </form>
     </div>
 </div>
-
 
 
 </body>
