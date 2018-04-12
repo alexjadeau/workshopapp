@@ -4646,6 +4646,7 @@ a {
     overflow: visible;
     clip: auto
 }
+
 .tchat {
     margin: 0 auto;
     max-width: 800px;
@@ -4682,7 +4683,7 @@ a {
 .container img.right {
     float: right;
     margin-left: 20px;
-    margin-right:0;
+    margin-right: 0;
 }
 
 .time-right {
@@ -4695,25 +4696,27 @@ a {
     color: #999;
 }
 
-.message{
-    margin-left : 0px;
-    margin-rigth :  0px;
+.message {
+    margin-left: 0px;
+    margin-rigth: 0px;
 }
-.w4-right{
-    float:right;
+
+.w4-right {
+    float: right;
 }
-#right{
-    float:right;
+
+#right {
+    float: right;
 }
 
 h1 {
-    color: #00005B	;
-    margin-left:30%;
-    margin-top:5%
+    color: #00005B;
+    margin-left: 30%;
+    margin-top: 5%
 }
 
-.imageEpsi{
-    margin-top:5%
+.imageEpsi {
+    margin-top: 5%
 }
 
 .chat {
@@ -4722,7 +4725,8 @@ h1 {
     widht: 100%;
 
 }
-.chat iframe{
+
+.chat iframe {
     widht: 100%;
 
 }
