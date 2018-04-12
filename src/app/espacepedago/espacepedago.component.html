@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<title>Espace pedagogique</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="assets/peda.css">
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
+       onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <div class="w3-bar w3-black w3-card">
+        <div class="w3-dropdown-hover w3-hide-small">
+            <button class="w3-padding-large w3-button" title="Project">Espace de travaille</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a href="#oracle" id="Oracle" class="w3-bar-item w3-button" onclick="select_project(this.id)">Oracle</a>
+                <a href="#JEE"  id="JEE"class="w3-bar-item w3-button" onclick="select_project(this.id)">JEE</a>
+                <a href="#IOT"  id="IOT"class="w3-bar-item w3-button" onclick="select_project(this.id)">IOT</a>
+                <a href="#WorkShop" id="WorkShop" class="w3-bar-item w3-button" onclick="select_project(this.id)">WorkShop</a>
+                <a href="#add" id="add"  class="w3-bar-item w3-button" onclick="toggle_div('id_du_div');">add workspace</a>
+
+            </div>
+        </div>
+
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="Project" id="Title">Sélectionner le groupe</button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="#oracle" id="Groupe1" class="w3-bar-item w3-button" onclick="select_Group(this.id)">Groupe 1</a>
+                    <a href="#JEE"  id="Groupe2"class="w3-bar-item w3-button" onclick="select_Group(this.id)">Groupe 2</a>
+                    <a href="#IOT"  id="Groupe3"class="w3-bar-item w3-button" onclick="select_Group(this.id)">Groupe 3</a>
+                    <a href="#WorkShop" id="Groupe4" class="w3-bar-item w3-button" onclick="select_Group(this.id)">Groupe 4</a>
+
+                </div>
+            </div>
+        <div class="w3-dropdown-hover w3-hide-small">
+            <button class="w3-padding-large w3-button" title="Project" id="Title1">Sélectionner l'intervanant</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a href="#oracle" id="Intervanant1" class="w3-bar-item w3-button" onclick="select_Intervenant(this.id)">Intervanant 1</a>
+
+
+            </div>
+        </div>
+
+        <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small" id="Title2">BAND</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large" id="right">Déconnection</a>
+
+
+    </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+    <a href="#band" class="w3-bar-item w3-button w3-padding-large">BAND</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large">TOUR</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large">CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">MERCH</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+    <!-- The Band Section -->
+    <div></div>
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="corp" style="display:block;">
+        <h2 class="w3-wide">Veuillez sélectionner un epsace de travaille ou en créez un nouveau</h2>
+        <!-- Un bouton avec '+' dedans, et un onclick qui appelle une fonction avec -->
+        <!-- en param le bouton et l'id du div à afficher/masquer. -->
+        <!-- Un div caché avec un attribut id -->
+        <div id="id_du_div" style="display:none;">
+            <form method="post" >
+                Nom de l'espace de travaille<input type="text">
+                Selectionner l'intervenant <SELECT name="nom" size="1">
+                <OPTION>mr 1</OPTION>
+                <OPTION>mr 2</OPTION>
+                <OPTION>mr 3</OPTION>
+                <OPTION>m 1</OPTION>
+                <OPTION>m 2</OPTION>
+            </SELECT>
+                <br><input type="submit">
+            </form>
+        </div>
+
+
+    </div>
+
+    <!-- End Page Content -->
+</div>
+
+
+<script>
+    // Automatic Slideshow - change image every 4 seconds
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+            myIndex = 1
+        }
+        //x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 4000);
+    }
+
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    var modal = document.getElementById('ticketModal');
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    function select_project(id) {
+
+        document.getElementById("Title").innerHTML = id;
+    }
+    function select_Group(id) {
+
+        document.getElementById("Title1").innerHTML = id;
+    }
+    function select_Intervenant(id) {
+
+        document.getElementById("Title2").innerHTML = id;
+    }
+    function toggle_div( id) { // On déclare la fonction toggle_div qui prend en param le bouton et un id
+        var div = document.getElementById(id); // On récupère le div ciblé grâce à l'id
+        var div1=document.getElementById("corp")
+        if(div.style.display=="none") { // Si le div est masqué...
+            div1.style.display="none";
+            div.style.display ="block"; // ... on l'affiche...
+
+        } else { // S'il est visible...
+
+            div.style.display = "none"; // ... on le masque...
+            div1.style.display =  "block";
+        }
+    }
+
+</script>
+
+</body>
+</html>

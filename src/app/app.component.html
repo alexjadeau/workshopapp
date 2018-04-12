@@ -12,7 +12,7 @@
     <div (click)="close()" id="close">
       <img alt="Exit cross" id="exit" src="../assets/images/exit.png" />
     </div>
-    <form id="loginP">
+    <form id="loginP" (submit)="logMe($event)">
       <span>Login</span><br />
       <input type="text" class="inputF"><br /><br />
       <span>Password</span><br />

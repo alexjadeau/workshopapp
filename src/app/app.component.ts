@@ -7,8 +7,6 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'TIME';
-
   banana() {
     const epsi = document.getElementById('epsi');
     const connect = document.getElementById('connect');
@@ -67,6 +65,26 @@ export class AppComponent {
     for (i = 0; i < 3; i++) {
       round = document.getElementsByClassName('round')[i];
       round.style.opacity = '1';
+    }
+  }
+  logMe(e) {
+    e.preventDefault();
+    const username = e.target.elements[0].value;
+    const password = e.target.elements[1].value;
+    const etudiant = 'etudiant', pedago = 'pedago', intervenant = 'intervenant';
+    if (username === etudiant && password === etudiant) {
+      window.location.href = 'http://localhost/etudiant.html';
+    } else
+    if (username === pedago && password === pedago) {
+      window.location.href = 'http://localhost/espace_pedago.html';
+    } else
+    if (username === intervenant && password === intervenant) {
+      window.location.href = 'http://localhost/intervenant.html';
+    } else
+    if (username === pedago || username === etudiant || username === intervenant) {
+      alert('Erreur de mot de passe');
+    } else {
+      alert('Erreur, identifiant erroné ou non inscrit');
     }
   }
 }
