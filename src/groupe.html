@@ -8,11 +8,13 @@
 <script>
     function add() {
         //Ceci va te renvoyer la value de l'option sur laquelle tu as cliqué ce qui peut être utile pour la suite..
-
+        document.getElementById('user').innerHTML = "";
         //liste correpond au name de ma balise select
         //======
         var value_option = users.options[users.selectedIndex].value;
         for (var i = 0; i < value_option; i++) {
+
+
 
             //Creation d'un élément
             var option = document.createElement('input');
@@ -69,8 +71,6 @@
                 <br>
             </select>
             <div id="user"></div>
-            <br> <label for="fname">Nom des étudiants</label>
-            <input type="text" id="fname4" name="firstname" placeholder="nom du groupe">
 
             <input type="submit" value="Submit">
 

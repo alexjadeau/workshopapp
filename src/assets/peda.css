@@ -1,3 +1,32 @@
+#moncercle{
+     background:#bfd70e;
+     border-radius:50%;
+     width:20px;
+     height:20px;
+     border:2px solid #679403;
+ }
+
+#moncercle1{
+    background:#bfd70e;
+    border-radius:50%;
+    width:20px;
+    height:20px;
+    border:2px solid #679403;
+}
+#moncercle2{
+    background: #d70b18;
+    border-radius:50%;
+    width:20px;
+    height:20px;
+    border:2px solid #940203;
+}
+#moncercle3{
+    background:#d70b18;
+    border-radius:50%;
+    width:20px;
+    height:20px;
+    border:2px solid #940203;
+}
 #right{
    float: right;
 }

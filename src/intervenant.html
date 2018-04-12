@@ -22,6 +22,19 @@
         </div>
 
         <script>
+            var etat = 0;
+
+            function online() {
+                if (etat == 0) {
+                    document.getElementById(moncercle).style.background = red;
+                    etat = 1;
+                } else {
+                    document.getElementById(moncercle).style.color = green;
+                    etat = 0;
+                }
+
+            }
+
             function select_project(id) {
 
                 document.getElementById("Title").innerHTML = id;
@@ -64,7 +77,9 @@
         <div class="w3-dropdown-hover w3-hide-small" id="right">
             <button class="w3-padding-large  w3-button ">Utilisateur<i class="fa fa-caret-down"></i></button>
             <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                <a href="#dispo" id="Etat" class="w3-bar-item w3-button">Disponibilitée</a>
+                <a href="#dispo" id="Etat" class="w3-bar-item w3-button" onclick="online()">
+                    <div id="moncercle">&nbsp;&nbsp;&nbsp;&nbsp;Dispo</div>
+                </a>
                 <a href="jetons.html" id="Jetons" class="w3-bar-item w3-button">Jetons</a>
                 <a href="index.hml" id="déconnection" class="w3-bar-item w3-button">Deconnection</a>
             </div>
