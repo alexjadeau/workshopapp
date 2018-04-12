@@ -5,19 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="assets/peda.css">
 <link rel="stylesheet" href="chat.css">
+<link rel="stylesheet" href="assets/intervenant.css">
 <script>
     function select_project(id) {
 
         document.getElementById("Title").innerHTML = id;
+        document.getElementsByClassName("text")[0].innerHTML = "<h1>Choisissez un intervenant </h1>";
     }
+
     function select_Group(id) {
 
         document.getElementById("Title1").innerHTML = id;
+        var text = document.getElementsByClassName("text")[0];
+        var ImgEpsi = document.getElementsByClassName("imageEpsi")[0];
+        var chat = document.getElementsByClassName("chat")[0];
+        text.style.display = "none";
+        ImgEpsi.style.display = "none";
+        chat.style.display = "inline";
     }
-    function select_Intervenant(id) {
 
-        document.getElementById("Title2").innerHTML = id;
-    }
 </script>
 <body>
 
@@ -31,47 +37,59 @@
             <button class="w3-padding-large w3-button" title="Project">Mes projets</button>
             <div class="w3-dropdown-content w3-bar-block w3-card-4">
                 <a href="#oracle" id="Oracle" class="w3-bar-item w3-button" onclick="select_project(this.id)">Oracle</a>
-                <a href="#JEE"  id="JEE"class="w3-bar-item w3-button" onclick="select_project(this.id)">JEE</a>
-                <a href="#IOT"  id="IOT"class="w3-bar-item w3-button" onclick="select_project(this.id)">IOT</a>
+                <a href="#JEE" id="JEE" class="w3-bar-item w3-button" onclick="select_project(this.id)">JEE</a>
+                <a href="#IOT" id="IOT" class="w3-bar-item w3-button" onclick="select_project(this.id)">IOT</a>
                 <a href="#WorkShop" id="WorkShop" class="w3-bar-item w3-button" onclick="select_project(this.id)">WorkShop</a>
-                <a href="groupe.html" id="add"  class="w3-bar-item w3-button" onclick="toggle_div('id_du_div');">créer un projet</a>
+                <a href="groupe.html" id="add" class="w3-bar-item w3-button" onclick="toggle_div('id_du_div');">créer un
+                    projet</a>
             </div>
         </div>
 
         <div class="w3-dropdown-hover w3-hide-small">
             <button class="w3-padding-large w3-button" title="Project" id="Title">Projet selectionner</button>
             <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                <a href="#oracle" id="intervenant 1" class="w3-bar-item w3-button" onclick="select_Group(this.id)">intervenant 1</a>
-                <a href="#JEE"  id="intervenant 2"class="w3-bar-item w3-button" onclick="select_Group(this.id)">intervenant 2</a>
-                <a href="#IOT"  id="intervenant 3"class="w3-bar-item w3-button" onclick="select_Group(this.id)">intervenant 3</a>
-                <a href="#WorkShop" id="intervenant 4" class="w3-bar-item w3-button" onclick="select_Group(this.id)">intervenant 4</a>
+                <a href="#oracle" id="intervenant 1" class="w3-bar-item w3-button" onclick="select_Group(this.id)">intervenant
+                    1</a>
+                <a href="#JEE" id="intervenant 2" class="w3-bar-item w3-button" onclick="select_Group(this.id)">intervenant
+                    2</a>
+                <a href="#IOT" id="intervenant 3" class="w3-bar-item w3-button" onclick="select_Group(this.id)">intervenant
+                    3</a>
+                <a href="#WorkShop" id="intervenant 4" class="w3-bar-item w3-button" onclick="select_Group(this.id)">intervenant
+                    4</a>
             </div>
         </div>
         <div class="w3-dropdown-hover w3-hide-small">
-            <button class="w3-padding-large w3-button" title="Project" id="Title1">intervenant <selectionné></selectionné></button>
+            <button class="w3-padding-large w3-button" title="Project" id="Title1">intervenant
+                <selectionné></selectionné>
+            </button>
             <div class="w3-dropdown-content w3-bar-block w3-card-4">
             </div>
         </div>
 
-            <div class="w3-dropdown-hover w3-hide-small">
-                <button class="w3-padding-large w3-button" title="Project">Jeton</button>
-                <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                    <a href="#oracle">100</a>
+        <div class="w3-dropdown-hover w3-hide-small">
+            <button class="w3-padding-large w3-button" title="Project">Jeton</button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a href="#oracle">100</a>
 
 
-                </div>
+            </div>
 
-        <a href="index.html" class="w3-bar-item w3-button w3-padding-large" id="right">Déconnection</a>
+            <a href="index.html" class="w3-bar-item w3-button w3-padding-large" id="right">Déconnection</a>
+
+        </div>
 
     </div>
+    <div class=" imageEpsi" align="center">
+        <img src="assets/images/JPO-EPSI-GRENOBLE-Venez-nous-rencontrer-!-101486_reference.png" height=40%" width=30%>
+    </div>
+    <div class="text">
+        <h1>Choisissez un de vos projets </h1>
+    </div>
 
-
-
-
-    <iframe width="100%" height="600" src="https://console.dialogflow.com/api-client/demo/embedded/62340c95-e82f-40e4-a768-5344f7095fd0"></iframe>
-
-
+    <div class="chat">
+        <iframe width="100%" height="600"
+                src="https://console.dialogflow.com/api-client/demo/embedded/62340c95-e82f-40e4-a768-5344f7095fd0"></iframe>
+    </div>
 </div>
-
 </body>
 </html>
